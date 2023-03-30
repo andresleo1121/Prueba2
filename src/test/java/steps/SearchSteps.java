@@ -22,7 +22,7 @@ public class SearchSteps {
 	LoginPage loginPage = new LoginPage(driver);
 	
 	
-	@Given("the user is in the index page demo serenity")
+	@Given("The user enters the swaglabs page")
 	public void theUserIsInIndexPage() throws InterruptedException
 	{
 		
@@ -40,57 +40,36 @@ public class SearchSteps {
 	
 		
 	
-	@When("Select Shippers")
-	public void userSelectShippers() throws InterruptedException
+	@Then("Select two products")
+	public void userTwoProducts() throws InterruptedException
 	{
 		
-		loginPage.newShippers();
+		loginPage.selectTwoProducts();
 				
 	}
 	
-	@Then("Select categories")
-	public void userSelectCategories() throws InterruptedException
+	@Then("Select cart")
+	public void userSelectCart() throws InterruptedException
 	{
-		loginPage.selectCategories();
+		loginPage.selectCart();
 		
 	}
 	
-	@When("Select categories tv")
-	public void userSelectCategoriestv() throws InterruptedException
+	@Then("Fill Out Form")
+	public void userFillOutForm() throws InterruptedException
 	{
 		
-		loginPage.clickCategoriesTv();
+		loginPage.completeForm();
 				
 	}
 	
-	@Then("filter by brand")
+	@Then("Click Finish")
 	public void userSelectBrand() throws InterruptedException
 	{
-		loginPage.clickFilterBrand();
+		loginPage.clickFinish();
 		
 	}
 	
-	@And("Select product")
-	public void userSelectProduct() throws InterruptedException
-	{
-		loginPage.clickProduct();
-		
-	}
-	
-	@When("Select categories pc")
-	public void userSelectCategoriespc() throws InterruptedException
-	{
-		
-		loginPage.clickCategoriesPc();
-				
-	}
-	
-	@Then("Select price")
-	public void userSelectPrice() throws InterruptedException
-	{
-		loginPage.clickPricePc();
-		
-	}
 	
 	@And("End")
 	public void userSelectEnd() throws InterruptedException
@@ -99,5 +78,21 @@ public class SearchSteps {
 		
 	}
 	
+	@Then("Remove products")
+	public void removeProducts() throws InterruptedException
+	{
+		loginPage.removeProducts();
+	}
 
+	@Then ("Remove one products")
+	public void removeProductsone () throws InterruptedException
+	{
+		loginPage.removeProductsone();
+	}
+	
+	@Then ("Cancel the order")
+	public void cancelOrder() throws InterruptedException
+	{
+		loginPage.clickCancel();
+	}
 }
